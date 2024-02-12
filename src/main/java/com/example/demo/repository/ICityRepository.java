@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface ICityRepository extends CrudRepository<City,Long> {
 
-    @Query("SELECT c FROM City c WHERE 1=1 and c.countryid.id = :countryId")
+    @Query("SELECT c FROM City c WHERE c.countryid.id = :countryId")
     List<City> getCitiesByCountryId(@Param("countryId") Long countryId);
 }
 
