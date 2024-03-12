@@ -5,8 +5,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
+//@PropertySource("file:C:/Temp/application.properties")
+//@PropertySource("file:/var/www/springioniccrud/application.properties")
+@PropertySource("file:${JAVA_APPL_PROPS_FOLDER}/springioniccrud/application.properties")
 public class CursojavaspringApplication {
 
 	private static final Logger loggerX = LoggerFactory.getLogger(CursojavaspringApplication.class);
